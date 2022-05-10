@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    font-size: 16px;
+}
+nav {
+    background: #222963;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+nav ul li a {
+    position: relative;
+}
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background: white;
+    width: 0;
+    height: 2px;
+    transition: all .4s ease ;
+}
+nav ul li a:hover:before {
+    width: 88%;
+}
+main {
+    position: relative;
+    width: 100%;
+    height: 92vh;
+    overflow: hidden;
+}
+main::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    background: url(../../images/Capture.png) no-repeat;
+}
+.row h1 {
+    font-size: 3.6em;
+}
+.photo img {
+    position: absolute;
+    width: 160% !important;
+    left: -45%;
+    top: 0;
+}
+.h2-special{
+    color: #222963;
+    font-weight: 600;
+}
+.services .row h4 {
+    color: #222963;
+    font-weight: 600;
+}
+.social {
+    background: #DFDFDF;
+}
+.social .row h2 {
+    font-size: 3.5em;
+    font-weight: bold;
+}
+.social .row p {
+    font-weight: 500;
+}
+.screen .back img{
+    left: -14%;
+    z-index: -1;
+}
+.edit .back img{
+    right: -13%;
+    top: -130px;
+    z-index: -1;
+}
+.edit .row .list h2::before {
+    content: "";
+    background: url(../../images/check-mark-black-outline.svg);
+    position: absolute;
+    width: 26px;
+    height: 18px;
+    left: -40px;
+    top: 3px;
+}
+.screen .row div:first-of-type img {
+    height: 90%;
+    padding-top: 50px;
+}
+.screen .row .list h2::before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    font-weight: 900;
+    color: #2EA444;
+    left: -40px;
+    top: 3px;
+}
+.p-special {
+    color: rgba(34, 40, 99);
+    font-size: .9em;
+}
+.edit {
+    height: 130vh;
+}
+.download {
+    background: #F5F5F5;
+}
+.download .apple,
+.download .play{
+    border: 1px solid black;
+    width: fit-content;
+}
+.download img  {
+    width: 20px;
+    vertical-align: middle;
+}
+.download a{
+    font-weight: 600;
+}
+.privacy {
+    background: #222963;
+}
+/* ************************************************** */
+@media (max-width : 992px) {
+    body {
+        font-size: 10px;
+    }
+    nav .navbar-brand img {
+        width: 60%;
+    }
+    main .row h1 {
+        margin: 30px 0 20px;
+        /* text-align: center; */
+    }
+    main .row p {
+        /* text-align: center; */
+        font-size: 1.2em;
+    }
+    .back {
+        display: none;
+    }    
+    .photo img {
+        width: 130% !important;
+        left: -15%;
+        top: 50px;
+    }
+    .services h2 {
+        text-align: center;
+    }
+    .p-special {
+        font-size: 1.5em;
+    }
+    .social .row h2 {
+    text-align: center; 
+   }
+    .social .row p {
+        text-align: center; 
+        font-size: 1.3em;
+        margin-top: 10px;
+    }
+    .screen, .edit {
+        text-align: center;
+        height: fit-content;
+    }
+    .screen .row .list h2::before,
+    .edit .row .list h2::before {
+        left: -7px;
+    }
+    .screenshot img{
+        width: 70%;
+    }
+    .edit .screenshot {
+        margin-bottom: 5em;
+    }
+    .screenshot {
+        order: 1;
+    }
+    .screen .notscreen,
+    .edit .notscreen {
+        order: 2;
+    }
+    .h2-special {
+        font-size: 1.8em !important;
+    }
+    .p-special {
+        font-size: 1.2em;
+    }
+    .download a {
+        font-size: 1.5em;
+    }
+    .privacy {
+        text-align: center;
+        font-size: 1.5em;
+    }
+}
